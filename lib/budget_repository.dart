@@ -20,12 +20,12 @@ class BudgetRepository {
   Future<List<Item>> getItems() async {
     try {
       final url =
-          '${_baseUrl}databases/${dotenv.env['02a1419e71ef4b359ab52d9143dcdf5dr']}/query';
+          '${_baseUrl}databases/${dotenv.env['NOTION_DATABASE_ID']}/query';
       final response = await _client.post(
         Uri.parse(url),
         headers: {
           HttpHeaders.authorizationHeader:
-              'Bearer ${dotenv.env['secret_TE6wpHkIqpRplrzo8PtveghRebwF1D4fZVdCK86d0u3']}',
+              'Bearer ${dotenv.env['NOTION_API_KEY']}',
           'Notion-Version': '2021-05-13',
         },
       );
@@ -35,7 +35,7 @@ class BudgetRepository {
         return (data['results'] as List).map((e) => Item.fromMap(e)).toList()
           ..sort((a, b) => b.date.compareTo(a.date));
       } else {
-        throw const Failure(message: 'Shit!');
+        throw const Failure(message: 'Something went wrong!');
       }
     } catch (_) {
       throw const Failure(message: 'Something went wrong!');
