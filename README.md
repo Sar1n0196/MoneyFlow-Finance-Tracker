@@ -1,16 +1,21 @@
-# money_flow
+# MoneyFlow
+## Expense Tracker Flutter Application
 
-A new Flutter project.
+An expense tracker application built with Flutter. Users can input their spending data in the app and view their spending history along with a pie chart of the categories where they spent their money. The app uses the Notion API to store and retrieve the spending data.
+
+## Features:
+- User authentication with Notion API </br>
+- Add and delete expense entries </br>
+- View chronological spending history </br>
+- View pie chart of spending categories </br>
+- Filter spending history by category </br>
+
+## Prerequisites
+- Flutter 2.5 or higher
+- Notion API key and database ID
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+To get started with this project, follow these steps:
 
-A few resources to get you started if this is your first Flutter project:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
